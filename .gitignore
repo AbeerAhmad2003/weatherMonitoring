@@ -1,0 +1,45 @@
+# Visual Studio / VSCode / Rider
+.vs/
+.idea/
+.vscode/
+
+# Build Folders
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.sdf
+*.cache
+*.log
+*.pdb
+
+# NuGet packages
+*.nupkg
+packages/
+
+# Rider / JetBrains IDE
+*.iml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Test results
+TestResults/
+
+# Publish outputs
+*.deploy
+*.dll
+*.exe
+
+# Others
+*.tmp
+*.bak
+*.swp
