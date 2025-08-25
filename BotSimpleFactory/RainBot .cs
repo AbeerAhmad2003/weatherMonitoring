@@ -5,16 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace weatherProj1
+namespace weatherProj1.BotSimpleFactory
 {
-    public class SunBot : WeatherBotBase
+    public class RainBot : WeatherBotBase
     {
-        public SunBot(BotConfig config) : base("SunBot", config) { }
+        public RainBot(BotConfig config) : base("RainBot", config) { }
 
         public override void Update(WeatherData data)
         {
             if (!Config.Enabled) return;
-            if (data.Temperature > Config.Threshold)
+            if (data.Humidity > Config.Threshold)
             {
                 Console.WriteLine($"{Name} activated!");
                 Console.WriteLine($"{Name}: \"{Config.Message}\"");

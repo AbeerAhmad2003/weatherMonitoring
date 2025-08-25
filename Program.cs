@@ -1,4 +1,7 @@
-﻿namespace weatherProj1
+﻿using weatherProj1.BotSimpleFactory;
+using weatherProj1.parserFactoryMethod;
+
+namespace weatherProj1
 {
     internal class Program
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace weatherProj1
+namespace weatherProj1.parserFactoryMethod
 {
     public class XmlWeatherParser : IWeatherDataParser
     {

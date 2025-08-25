@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace weatherProj1
+namespace weatherProj1.parserFactoryMethod
 {
-    public class JsonParserCreator : ParserCreator
+    public class XmlParserCreator : ParserCreator
     {
         public override IWeatherDataParser CreateParser()
         {
-            return new JsonWeatherDataParser();
+            return new XmlWeatherParser();
         }
     }
 }

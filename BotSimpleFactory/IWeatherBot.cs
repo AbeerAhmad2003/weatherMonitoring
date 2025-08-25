@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace weatherProj1
+namespace weatherProj1.BotSimpleFactory
 {
     public interface IWeatherBot
     {
