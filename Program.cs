@@ -1,5 +1,5 @@
 ﻿using weatherProj1.BotSimpleFactory;
-using weatherProj1.parserFactoryMethod;
+using weatherProj1.DataParsing;
 
 namespace weatherProj1
 {
@@ -7,10 +7,11 @@ namespace weatherProj1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-            string configJson = File.ReadAllText("C:\\Users\\Asus\\Desktop\\weatherProject\\botsConfig.json");
+            string configPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Configs", "botsConfig.json");
+            string configJson = File.ReadAllText(configPath);
             var bots = BotFactory.CreateBots(configJson);
             var station = new WeatherStation();
+        
             foreach (var bot in bots)
             {
                 station.RegisterBot(bot);
@@ -20,7 +21,7 @@ namespace weatherProj1
               ""Temperature"": 32,
               ""Humidity"": 75
             }";
-            ParserCreator parserCreator = new JsonParserCreator();
+            ParserCreator parserCreator = ParserFactory.CreateParser(weatherJson);
 
             IWeatherDataParser parser = parserCreator.CreateParser();
             WeatherData? data = parser.Parse(weatherJson);

@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace weatherProj1.parserFactoryMethod
+namespace weatherProj1.DataParsing
 {
     public class JsonWeatherDataParser : IWeatherDataParser
     {

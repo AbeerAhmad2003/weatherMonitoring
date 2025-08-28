@@ -11,7 +11,6 @@ namespace weatherProj1
         private string _location;
         private double _temperature;
         private double _humidity;
-
         public string Location
         {
             get => _location;
@@ -32,7 +31,6 @@ namespace weatherProj1
                 _temperature = value;
             }
         }
-
         public double Humidity
         {
             get => _humidity;
@@ -43,7 +41,6 @@ namespace weatherProj1
                 _humidity = value;
             }
         }
-
         public WeatherData(string location, double temperature, double humidity)
         {
             Location = location;

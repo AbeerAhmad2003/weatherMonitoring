@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace weatherProj1.parserFactoryMethod
+﻿namespace weatherProj1.DataParsing
 {
     public class XmlParserCreator : ParserCreator
     {

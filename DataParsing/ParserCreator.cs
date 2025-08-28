@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace weatherProj1.parserFactoryMethod
+namespace weatherProj1.DataParsing
 {
-    public interface IWeatherDataParser
+    public abstract class ParserCreator
     {
-        public WeatherData? Parse(string input);
+        public abstract IWeatherDataParser CreateParser();
     }
 }
