@@ -7,7 +7,8 @@ namespace weatherProj1
     {
         static void Main(string[] args)
         {
-            string configPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Configs", "botsConfig.json");
+            string configPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Configs", "‎botsConfig.json");
+           
             string configJson = File.ReadAllText(configPath);
             var bots = BotFactory.CreateBots(configJson);
             var station = new WeatherStation();

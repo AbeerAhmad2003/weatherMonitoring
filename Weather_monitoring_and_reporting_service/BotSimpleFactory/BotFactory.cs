@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
+﻿using System.Text.Json;
 
 namespace weatherProj1.BotSimpleFactory
 {
@@ -12,7 +7,17 @@ namespace weatherProj1.BotSimpleFactory
         public static List<WeatherBotBase> CreateBots(string configJson)
         {
             var bots = new List<WeatherBotBase>();
-            var config = JsonSerializer.Deserialize<Dictionary<string, BotConfig>>(configJson);
+            if (configJson == null) return bots;
+            Dictionary<string, BotConfig>? config = null;
+            try
+            {
+                config = JsonSerializer.Deserialize<Dictionary<string, BotConfig>>(configJson);
+            }
+            catch (JsonException)
+            {
+                return bots;
+            }
+
             if (config == null) return bots;
 
             foreach (var entry in config)
@@ -38,6 +43,5 @@ namespace weatherProj1.BotSimpleFactory
 
             return bots;
         }
-
     }
 }

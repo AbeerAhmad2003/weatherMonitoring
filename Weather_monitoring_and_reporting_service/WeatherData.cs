@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace weatherProj1
+﻿namespace weatherProj1
 {
     public class WeatherData
     {
@@ -17,7 +11,7 @@ namespace weatherProj1
             set
             {
                 if (string.IsNullOrEmpty(value))
-                    throw new ArgumentNullException("Location cannot be empty.");
+                    throw new ArgumentNullException(nameof(Location));
                 _location = value;
             }
         }
@@ -27,7 +21,7 @@ namespace weatherProj1
             set
             {
                 if (value < -100 || value > 100)
-                    throw new ArgumentOutOfRangeException(nameof(Temperature), "Temperature out of range.");
+                    throw new ArgumentOutOfRangeException(nameof(Temperature));
                 _temperature = value;
             }
         }
@@ -37,7 +31,7 @@ namespace weatherProj1
             set
             {
                 if (value < 0 || value > 100)
-                    throw new ArgumentOutOfRangeException(nameof(Humidity), "Humidity must be between 0 and 100.");
+                    throw new ArgumentOutOfRangeException(nameof(Humidity));
                 _humidity = value;
             }
         }

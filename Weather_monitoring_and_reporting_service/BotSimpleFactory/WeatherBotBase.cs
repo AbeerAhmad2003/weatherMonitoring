@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace weatherProj1.BotSimpleFactory
+﻿namespace weatherProj1.BotSimpleFactory
 {
     public abstract class WeatherBotBase : IWeatherBot
     {
-        protected BotConfig Config;
-        protected string Name;
+        protected readonly BotConfig Config;
+        protected readonly string Name;
 
         protected WeatherBotBase(string name, BotConfig config)
         {

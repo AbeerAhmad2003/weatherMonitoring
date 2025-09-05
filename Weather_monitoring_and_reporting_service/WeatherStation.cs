@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using weatherProj1.BotSimpleFactory;
+﻿using weatherProj1.BotSimpleFactory;
 
 namespace weatherProj1
 {
