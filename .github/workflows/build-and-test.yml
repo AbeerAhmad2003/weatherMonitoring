@@ -25,10 +25,10 @@ jobs:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
       - name: Restore dependencies
-        run: dotnet restore ./src/AirportTicketBooking.csproj
+        run: dotnet restore ./Weather_monitoring_and_reporting_service/weatherProj1.csproj
 
       - name: Build
-        run: dotnet build ./src/AirportTicketBooking.csproj --configuration Release --no-restore
+        run: dotnet build ./Weather_monitoring_and_reporting_service/weatherProj1.csproj --configuration Release --no-restore
 
       - name: Test
-        run: dotnet test ./tests/AirportTicketBooking.Tests.csproj --no-restore --verbosity normal
+        run: dotnet test ./WeatherService.Tests/WeatherServicetTests.csproj --no-restore --verbosity normal
