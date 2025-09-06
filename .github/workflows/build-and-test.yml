@@ -9,7 +9,7 @@ on:
       - '**.csproj'
 
 env:
-  DOTNET_VERSION: '6.0.401'
+  DOTNET_VERSION: '9.0.x' 
 
 jobs:
   build-and-test:
@@ -17,18 +17,23 @@ jobs:
 
     steps:
 
+    
       - uses: actions/checkout@v3
 
+    
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
+    
       - name: Restore dependencies
         run: dotnet restore ./Weather_monitoring_and_reporting_service/weatherProj1.csproj
 
+     
       - name: Build
         run: dotnet build ./Weather_monitoring_and_reporting_service/weatherProj1.csproj --configuration Release --no-restore
 
+   
       - name: Test
         run: dotnet test ./WeatherService.Tests/WeatherServicetTests.csproj --no-restore --verbosity normal
