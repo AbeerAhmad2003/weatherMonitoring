@@ -16,6 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - uses: actions/checkout@v3
 
       - name: Setup .NET
@@ -24,10 +25,10 @@ jobs:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore ./src/AirportTicketBooking.csproj
 
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build ./src/AirportTicketBooking.csproj --configuration Release --no-restore
 
       - name: Test
-        run: dotnet test --no-restore --verbosity normal
+        run: dotnet test ./tests/AirportTicketBooking.Tests.csproj --no-restore --verbosity normal
